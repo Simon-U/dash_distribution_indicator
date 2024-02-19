@@ -13,11 +13,18 @@ It renders an input with the property `value`
 which is editable by the user.
 Keyword arguments:
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
-- `label` (String; required): A label that will be printed when this component is rendered.
-- `value` (String; optional): The value displayed in the input.
+- `actualValue` (Real; optional): Actual value of the distribution
+- `colorActual` (String; optional): The color of the actual value indicator. A string representation of hex value
+- `colorExpected` (String; optional): The color of the expected value indicator. A string representation of hex value
+- `colorInterval` (Array; optional): Interval of five hex colors providing the color for the intervals
+- `expectedValue` (Real; optional): Expected value of the distribution
+- `height` (Real; optional)
+- `interval` (Array; optional): Intervals, an array of 6 values providing 5 intervals
+- `style` (Array; optional): Interval of five hex colors providing the color for the intervals
+- `width` (Real; optional)
 """
 function dashdistributionindicator(; kwargs...)
-        available_props = Symbol[:id, :label, :value]
+        available_props = Symbol[:id, :actualValue, :colorActual, :colorExpected, :colorInterval, :expectedValue, :height, :interval, :style, :width]
         wild_props = Symbol[]
         return Component("dashdistributionindicator", "DashDistributionIndicator", "dash_distribution_indicator", available_props, wild_props; kwargs...)
 end

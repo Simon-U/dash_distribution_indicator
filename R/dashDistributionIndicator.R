@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-dashDistributionIndicator <- function(id=NULL, label=NULL, value=NULL) {
+dashDistributionIndicator <- function(id=NULL, actualValue=NULL, colorActual=NULL, colorExpected=NULL, colorInterval=NULL, expectedValue=NULL, height=NULL, interval=NULL, style=NULL, width=NULL) {
     
-    props <- list(id=id, label=label, value=value)
+    props <- list(id=id, actualValue=actualValue, colorActual=colorActual, colorExpected=colorExpected, colorInterval=colorInterval, expectedValue=expectedValue, height=height, interval=interval, style=style, width=width)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ dashDistributionIndicator <- function(id=NULL, label=NULL, value=NULL) {
         props = props,
         type = 'DashDistributionIndicator',
         namespace = 'dash_distribution_indicator',
-        propNames = c('id', 'label', 'value'),
+        propNames = c('id', 'actualValue', 'colorActual', 'colorExpected', 'colorInterval', 'expectedValue', 'height', 'interval', 'style', 'width'),
         package = 'dashDistributionIndicator'
         )
 
